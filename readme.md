@@ -2,7 +2,7 @@
 
 Integrating Mobile Device Management (MDM) support into the reMarkable 2 e-ink reader marks a significant advancement in efficient real-time monitoring and remote device management. This project focuses on porting the Mini-SNMPD agent, a lightweight [SNMP server](https://www.manageengine.com/network-monitoring/what-is-snmp.html), into the reMarkable OS. This integration enables seamless communication with MDM platforms like ManageEngine.
 
-[![Watch the video](https://raw.githubusercontent.com/99x-incubator/remarkable-2-mdm/refs/heads/main/resources/doc/remarkable-manageengine-integration.webm)](https://raw.githubusercontent.com/99x-incubator/remarkable-2-mdm/refs/heads/main/resources/doc/remarkable-manageengine-integration.webm)
+[Watch the video](https://raw.githubusercontent.com/99x-incubator/remarkable-2-mdm/refs/heads/main/resources/doc/remarkable-manageengine-integration.webm)
 
 ## Why mini-snmpd?
 The [mini-snmpd](https://github.com/troglobit/mini-snmpd) agent was selected for its simplicity and adaptability, making it ideal for resource-constrained environments such as the reMarkable 2. To customize the agent for the device's specific capabilities, we enhanced its functionality by incorporating custom Object Identifiers (OIDs) that reflect parameters unique to the reMarkable 2. These custom OIDs include:
