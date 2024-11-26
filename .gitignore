@@ -26,3 +26,11 @@
 /mini-snmpd/GRTAGS
 /mini-snmpd/GSYMS
 /mini-snmpd/GTAGS
+
+# Ignore VS code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
