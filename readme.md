@@ -44,6 +44,8 @@ After compiling, transfer the mini-snmpd file to the reMarkable 2 using SCP via 
 mini-snmpd -n -p 161 -D "reMarkable 2" -L "99x-65" -C "user@99x.io" -d '/' -i usb1
 ```
 
+![Running mini-snmpd on reMarkable2](https://raw.githubusercontent.com/99x-incubator/remarkable-2-mdm/refs/heads/main/resources/doc/minisnmpd-rm2.png)
+
 The detailed explanation about each parameter in given below:
 
 | Key   | Parameter           | Example            | Description                                                                                                                                                                                                  |
@@ -70,6 +72,10 @@ ManageEngine is highly effective for managing SNMP-based devices due to its stro
 ## Device discovery and monitoring
 When ManageEngine begins its Device Discovery phase, it scans the network for connected devices using protocols such as SNMP, ICMP, and ARP. Devices that respond to these queries are automatically identified and added to the management console. For SNMP-enabled devices, ManageEngine initiates communication by sending a GET request to retrieve the device's base Object Identifier (OID). The response to this request provides essential information, including the device type, vendor, and supported metrics.
 
+![reMarkable2 on ManageEngine monitoring dashboard](https://raw.githubusercontent.com/99x-incubator/remarkable-2-mdm/refs/heads/main/resources/doc/manageengine-rm2.png)
+
 In the case of the reMarkable 2, the customized mini-snmpd agent retrieves data from a pre-configured range of Object Identifiers (OIDs), such as 1.3.6.1.10.1.1. This data includes device-specific information, such as battery level, document count, and storage status. ManageEngine processes this information by parsing the reMarkable 2-specific MIB file and displays it on the dashboard with relevant details, including device name, location, and contact information, all of which were set up during the Mini-SNMPD configuration process.
+
+![reMarkable 2 active /response time.](https://raw.githubusercontent.com/99x-incubator/remarkable-2-mdm/refs/heads/main/resources/doc/rm2-response-sample.png)
 
 This automated discovery process eliminates manual configuration, significantly reducing administrative overhead. Once added, the reMarkable 2 can be monitored continuously, with SNMP polls providing real-time updates on device metrics. Alerts can also be configured to notify administrators of critical changes, such as low battery levels or high storage usage, enabling proactive device management and ensuring the reliability of deployed devices.
